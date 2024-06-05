@@ -10,6 +10,8 @@
     <button class="tab-button" data-tab-target="#tab1">Accueil</button>
     <button class="tab-button" data-tab-target="#tab2">Présentation</button>
     <button class="tab-button" data-tab-target="#tab3">Ecole</button>
+    <button class="tab-button" data-tab-target="#tab4">snake</button>
+    
   </div>
 
   <div class="tab-content" id="tab1">
@@ -139,6 +141,39 @@
     
     <script src="snake.js"></script>
   </div>
+
+
+  <div class="tab-content" id="tab4">
+
+
+    <style>
+      #canvas {
+        display: block;
+        margin: 0 auto;
+        background-color: black;
+      }
+      #controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      button {
+        margin: 0 10px;
+      }
+    </style>
+  
+  
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+      <button onclick="startGame()">Démarrer</button>
+      <button onclick="stopGame()">Arrêter</button>
+      <button onclick="resetGame()">Réinitialiser</button>
+    
+    <script src="snake.js"></script>
+    
+  </div>
+
   
 
 
