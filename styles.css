@@ -1,3 +1,46 @@
+/* Réinitialisation des marges et des paddings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  padding: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+  column-gap: 50px;
+}
+
+#col1 {
+  flex-basis: 300px;
+  padding: 40px;
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 * {
   box-sizing: border-box;
@@ -7,15 +50,17 @@
 html {width: 100%; margin: 0;}
 body {
   background: linear-gradient(to right, #4e88a4, #9eb3be);
-}
-header {background-color: black; padding: 25px;}
 
-section { display:flex; margin: 50px;column-gap: 50px;}
-  #col1 {  float:left; width: 300px; padding-left: 40px;padding-right: 40px; }
-  #text { float:auto; width:100%; }
+}
+
+#text {
+  flex: 1;
+  padding: 20px;
+}
 
 .tabs {
   display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -26,6 +71,11 @@ section { display:flex; margin: 50px;column-gap: 50px;}
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #ccc;
 }
 
 .tab-button.active {
@@ -38,22 +88,64 @@ section { display:flex; margin: 50px;column-gap: 50px;}
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .tab-content.active {
   display: block;
 }
 
+h1, h2, h3, h4 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 37px;
+}
+
 h4 {
-  color: rgb(18, 6, 76);
   font-size: 30px;
+  color: rgb(18, 6, 76);
 }
-h2 { font-size: 42px;}
-h1 { font-size: 50px;
-    width: 1000px;
-    margin: auto;
-    text-align: center;
+
+
+
+.bounce {
+  animation: bounce 2s infinite;
+  margin-top: 10px;
 }
+
+@keyframes bounce {
+  to {
+    transform: translateY(10);
+    transform-origin: 50% 50%;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.parallax {
+  background-image: url(images/ecole.jpg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h3 { font-size: 37px;}
 .bounce {
   animation: bounce 2s infinite;
