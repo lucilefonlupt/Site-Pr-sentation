@@ -10,6 +10,7 @@
     <button class="tab-button" data-tab-target="#tab1">Accueil</button>
     <button class="tab-button" data-tab-target="#tab2">Présentation</button>
     <button class="tab-button" data-tab-target="#tab3">Ecole</button>
+    <button class="tab-button" data-tab-target="#tab4">pac man</button>
   </div>
 
   <div class="tab-content" id="tab1">
@@ -21,7 +22,7 @@
 
 <p>Notre formation est rigoureusement structurée pour maximiser notre apprentissage et notre capacité à relever des défis techniques réels. Voici un aperçu de ce que nous couvrons :</p>
 
-<h3>Les compétences</h3>
+<h3>Les compétences </h3>
 
 <ul>
   <li>HTML & CSS : Les fondations de tout site web, nous apprenons à structurer le contenu et à le styliser pour une présentation visuelle attrayante.</li>
@@ -55,9 +56,11 @@
   
       <section>
         <div id="col1">
-        <img src="images/ma_tete_alex.png" alt="Photo d'Alex">
-              
-      </div>
+          <div class="bounce">
+            <img src="images/ma_tete_alex.png" alt="Photo d'Alex" />
+          </div>
+        </div>
+
       <div id="text">
         <p id="paragraphe1"><b>Alexandra Lugrézi</b></p>
           <p id="paragraphe2">
@@ -66,8 +69,12 @@
     </section>
       
       <section>
+
         <div id="col1">
-      <img src="images/Lucile.png" alt="Photo de Lucile">              
+        <div class="bounce">
+          <img src="images/Lucile.png" alt="Photo de Lucile"> 
+        </div>
+
       </div>
       <div id="text">
         <p id="paragraphe1"><b>Lucile Fonlupt</b></p>
@@ -78,7 +85,9 @@
 
     <section>
         <div id="col1">
-      <img src="images/token Sidney.png" alt="Photo de Sidney">              
+          <div class="bounce">
+      <img src="images/token Sidney.png" alt="Photo de Sidney"> 
+         </div>             
       </div>
       <div id="text">
         <p id="paragraphe1"><b>Sidney Nguyen</b></p>
@@ -93,6 +102,9 @@
   
 
   <div class="tab-content" id="tab3">
+    <div class="parallax">
+      <img src="images/ecole.jpg" alt="photo ecole" style="object-fit: cover; border-style: groove  1px ;" width="100%" height="auto" />
+        </div>
     <p>Simplon est un réseau de fabriques numériques et inclusives en France et à l’étranger. L'école forme plus de 30 000 Simploniens et Simploniennes depuis 2013, dont 30% de femmes et 46% de personnes peu ou pas diplômées. C'est une entreprise sociale et solidaire qui entend faire du numérique un véritable levier d’inclusion pour révéler des talents différents peu représentés dans le digital et les métiers techniques du numérique. Ils accompagnent les organisations pour que leur transformation digitale reste inclusive. De manière indirecte, Simplon agit également dans le domaine de la médiation numérique et de l'apprentissage du numérique créatif auprès des enfants.</p>
 
 <h2>Les 6 piliers de la pédagogie active</h2>
@@ -108,7 +120,15 @@
 <p>Accompagner avec une équipe pluridisciplinaire : Formateurs du monde professionnel, responsable formation et insertion conjuguent leurs forces pour accompagner au mieux les compétences tant techniques que générales.</p>
 
 <p>Construire des collectifs d'apprenant-es mixtes : La diversité de profils permet à chacun de trouver sa place. L'hétérogénéité des niveaux disciplinaires permet de créer une forte entraide entre les apprenant-es.</p>
-  </div>
+
+
+</div>
+
+
+<div class="tab-content" id="tab4">
+  <script src="snake.js"></script>
+
+</div>
 
   <script>
     // Select all tab buttons and tab content elements
@@ -132,6 +152,18 @@
     // Set the first tab button and content as active by default
     tabButtons[0].classList.add('active');
     document.querySelector('#tab1').classList.add('active');
+    const parallax = document.querySelector('.parallax');
+const img = parallax.querySelector('img');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const imgTop = img.offsetTop;
+  const range = img.offsetHeight * 1.5 - img.offsetHeight;
+  const percentage = ((scrollPosition - imgTop) / ((window.innerHeight + img.offsetHeight) / 100));
+  const translation = (percentage / 100) * range - range / 2;
+  img.style.transform = `translate(0, ${translation}px)`;
+});
   </script>
 </body>
 </html>
+
