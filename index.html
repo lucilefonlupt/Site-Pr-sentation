@@ -130,6 +130,40 @@
 
 </div>
 
+  <div class="tab-content" id="tab4">
+
+
+    <style>
+      #canvas {
+        display: block;
+        margin: 0 auto;
+        background-color: black;
+      }
+      #controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      button {
+        margin: 0 10px;
+      }
+    </style>
+  
+  
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+      <button onclick="startGame()">Démarrer</button>
+      <button onclick="stopGame()">Arrêter</button>
+      <button onclick="resetGame()">Réinitialiser</button>
+    
+    <script src="snake.js"></script>
+  </div>
+  
+
+
+
+
   <script>
     // Select all tab buttons and tab content elements
     const tabButtons = document.querySelectorAll('.tab-button');
