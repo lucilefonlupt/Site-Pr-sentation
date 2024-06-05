@@ -10,7 +10,9 @@
     <button class="tab-button" data-tab-target="#tab1">Accueil</button>
     <button class="tab-button" data-tab-target="#tab2">Présentation</button>
     <button class="tab-button" data-tab-target="#tab3">Ecole</button>
-    <button class="tab-button" data-tab-target="#tab4'">snake</button>
+    <button class="tab-button" data-tab-target="#tab4">snake</button>
+    
+
   </div>
 
   <div class="tab-content" id="tab1">
@@ -100,6 +102,11 @@
   
 
   <div class="tab-content" id="tab3">
+    
+    <div class="parallax">
+      <img src="images/ecole.jpg" alt="photo ecole" style="object-fit: cover; border-style: groove  1px ;" width="100%" height="auto" />
+    </div>
+    
     <p>Simplon est un réseau de fabriques numériques et inclusives en France et à l’étranger. L'école forme plus de 30 000 Simploniens et Simploniennes depuis 2013, dont 30% de femmes et 46% de personnes peu ou pas diplômées. C'est une entreprise sociale et solidaire qui entend faire du numérique un véritable levier d’inclusion pour révéler des talents différents peu représentés dans le digital et les métiers techniques du numérique. Ils accompagnent les organisations pour que leur transformation digitale reste inclusive. De manière indirecte, Simplon agit également dans le domaine de la médiation numérique et de l'apprentissage du numérique créatif auprès des enfants.</p>
 
 <h2>Les 6 piliers de la pédagogie active</h2>
@@ -146,6 +153,39 @@
     
     <script src="snake.js"></script>
   </div>
+
+
+  <div class="tab-content" id="tab4">
+
+
+    <style>
+      #canvas {
+        display: block;
+        margin: 0 auto;
+        background-color: black;
+      }
+      #controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      button {
+        margin: 0 10px;
+      }
+    </style>
+  
+  
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+      <button onclick="startGame()">Démarrer</button>
+      <button onclick="stopGame()">Arrêter</button>
+      <button onclick="resetGame()">Réinitialiser</button>
+    
+    <script src="snake.js"></script>
+    
+  </div>
+
   
 
 
