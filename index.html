@@ -58,9 +58,7 @@
   
       <section>
         <div id="col1">
-          <div class="bounce">
         <img src="images/ma_tete_alex.png" alt="Photo d'Alex">
-          </div>
               
       </div>
       <div id="text">
@@ -72,9 +70,7 @@
       
       <section>
         <div id="col1">
-          <div class="bounce">
       <img src="images/Lucile.png" alt="Photo de Lucile">              
-          </div>
       </div>
       <div id="text">
         <p id="paragraphe1"><b>Lucile Fonlupt</b></p>
@@ -85,10 +81,8 @@
 
     <section>
         <div id="col1">
-          <div class="bounce">
       <img src="images/token Sidney.png" alt="Photo de Sidney">              
       </div>
-    </div>
       <div id="text">
         <p id="paragraphe1"><b>Sidney Nguyen</b></p>
           <p id="paragraphe2">
@@ -155,36 +149,9 @@
   </div>
 
 
-  <div class="tab-content" id="tab4">
 
+  
 
-    <style>
-      #canvas {
-        display: block;
-        margin: 0 auto;
-        background-color: black;
-      }
-      #controls {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      button {
-        margin: 0 10px;
-      }
-    </style>
-  
-  
-  <body>
-    <canvas id="canvas"></canvas>
-    <div id="controls">
-      <button onclick="startGame()">Démarrer</button>
-      <button onclick="stopGame()">Arrêter</button>
-      <button onclick="resetGame()">Réinitialiser</button>
-    
-    <script src="snake.js"></script>
-    
-  </div>
 
   
 
@@ -213,17 +180,7 @@
     // Set the first tab button and content as active by default
     tabButtons[0].classList.add('active');
     document.querySelector('#tab1').classList.add('active');
-    const parallax = document.querySelector('.parallax');
-const img = parallax.querySelector('img');
-
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
-  const imgTop = img.offsetTop;
-  const range = img.offsetHeight * 1.5 - img.offsetHeight;
-  const percentage = ((scrollPosition - imgTop) / ((window.innerHeight + img.offsetHeight) / 100));
-  const translation = (percentage / 100) * range - range / 2;
-  img.style.transform = `translate(0, ${translation}px)`;
-});
   </script>
+
 </body>
 </html>
