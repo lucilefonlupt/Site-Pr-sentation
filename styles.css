@@ -1,5 +1,9 @@
 
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html {width: 100%; margin: 0;}
 body {
   background: linear-gradient(to right, #4e88a4, #9eb3be);
@@ -51,4 +55,54 @@ h1 { font-size: 50px;
     text-align: center;
 }
 h3 { font-size: 37px;}
+.bounce {
+  animation: bounce 2s infinite;
+  margin-top: 10px;
+}
 
+@keyframes bounce {
+  to {
+    transform: translateY(10);
+    transform-origin: 50% 50%;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.parallax {
+  background-image: url(images/ecole.jpg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax {
+  overflow: hidden;
+  height: 600px; /* Hauteur de l'image */
+}
+
+.parallax img {
+  transform: translate(0, 0);
+  transition: transform 0.5s;
+}
+
+h1 {
+  animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+
+  20% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
