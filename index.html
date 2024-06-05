@@ -110,6 +110,40 @@
 <p>Construire des collectifs d'apprenant-es mixtes : La diversité de profils permet à chacun de trouver sa place. L'hétérogénéité des niveaux disciplinaires permet de créer une forte entraide entre les apprenant-es.</p>
   </div>
 
+  <div class="tab-content" id="tab4">
+
+
+    <style>
+      #canvas {
+        display: block;
+        margin: 0 auto;
+        background-color: black;
+      }
+      #controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      button {
+        margin: 0 10px;
+      }
+    </style>
+  
+  
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+      <button onclick="startGame()">Démarrer</button>
+      <button onclick="stopGame()">Arrêter</button>
+      <button onclick="resetGame()">Réinitialiser</button>
+    
+    <script src="snake.js"></script>
+  </div>
+  
+
+
+
+
   <script>
     // Select all tab buttons and tab content elements
     const tabButtons = document.querySelectorAll('.tab-button');
